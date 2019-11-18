@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>546</width>
+    <height>548</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>546</width>
+    <height>548</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>546</width>
+    <height>548</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>hehe</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>输入任务：</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>60</y>
+      <width>61</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>任务名称：</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="taskpath">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>20</y>
+      <width>341</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;手动输入任务或从打开文件中选择&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="placeholderText">
+     <string>D:\text.exe</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="taskopenfile">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>20</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>打开文件</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="taskname">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>60</y>
+      <width>113</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string extracomment="任务名称不可重复">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;任务名称不可重复&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="placeholderText">
+     <string>task_test</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>60</y>
+      <width>61</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>计划类型：</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="tasktype">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>60</y>
+      <width>71</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="currentText">
+     <string>运行一次</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>运行一次</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>秒(1-59)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>分(1-59)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>时(1-23)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>天(1-31)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>周(1-53)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>月(1-12)</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>62</y>
+      <width>54</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>频率：</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="taskrate">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>60</y>
+      <width>113</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;频率必须为数字。运行一次的频率不需要填写，只需要填写开始日期&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="placeholderText">
+     <string>10</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>100</y>
+      <width>61</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>开始日期：</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>100</y>
+      <width>61</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>结束日期：</string>
+    </property>
+   </widget>
+   <widget class="QDateTimeEdit" name="taskstartime">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>100</y>
+      <width>181</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="displayFormat">
+     <string>yyyy-MM-dd HH:mm:ss</string>
+    </property>
+   </widget>
+   <widget class="QDateTimeEdit" name="taskendtime">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>100</y>
+      <width>181</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="dateTime">
+     <datetime>
+      <hour>0</hour>
+      <minute>0</minute>
+      <second>0</second>
+      <year>2099</year>
+      <month>1</month>
+      <day>1</day>
+     </datetime>
+    </property>
+    <property name="displayFormat">
+     <string>yyyy-MM-dd HH:mm:ss</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>130</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>当前任务：</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="taskboot">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>450</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>加入开机启动</string>
+    </property>
+   </widget>
+   <widget class="QListView" name="tasklist">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>161</y>
+      <width>481</width>
+      <height>231</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>420</y>
+      <width>54</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>任务名称：</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="taskdeletename">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>415</y>
+      <width>131</width>
+      <height>21</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="taskdelete">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>410</y>
+      <width>75</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>删除任务</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="taskdeleteall">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>410</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>清空任务</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="taskstartnow">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>410</y>
+      <width>75</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>立即执行</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>460</y>
+      <width>54</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>进程数：</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="taskprocessnum">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>450</y>
+      <width>113</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>2</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>460</y>
+      <width>54</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>线程数：</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="taskthreadnum">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>450</y>
+      <width>113</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>8</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="taskstar">
+    <property name="geometry">
+     <rect>
+      <x>364</x>
+      <y>490</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>启动</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="stop">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>490</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>停止</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="statusTip">
+    <string/>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>taskopenfile</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>onopenfile()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>493</x>
+     <y>33</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>528</x>
+     <y>48</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>taskstartnow</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>onstartnow()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>280</x>
+     <y>424</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>312</x>
+     <y>405</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>taskdelete</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>ondeletetask()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>379</x>
+     <y>423</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>404</x>
+     <y>398</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>taskdeleteall</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>ondeleteall()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>468</x>
+     <y>423</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>525</x>
+     <y>408</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>taskboot</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>onstartboot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>490</x>
+     <y>468</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>510</x>
+     <y>469</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>stop</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>onstop()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>288</x>
+     <y>506</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>355</x>
+     <y>519</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>taskstar</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>onstart()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>442</x>
+     <y>511</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>516</x>
+     <y>511</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tasklist</sender>
+   <signal>clicked(QModelIndex)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>onselecttask()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>197</x>
+     <y>242</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>530</x>
+     <y>260</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>onopenfile()</slot>
+  <slot>onstartnow()</slot>
+  <slot>ondeletetask()</slot>
+  <slot>ondeleteall()</slot>
+  <slot>onstartboot()</slot>
+  <slot>onstop()</slot>
+  <slot>onstart()</slot>
+  <slot>onselecttask()</slot>
+ </slots>
+</ui>
